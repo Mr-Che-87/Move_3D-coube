@@ -1,0 +1,43 @@
+.container {
+  perspective: 500px;  /*задаём 3D-перспективу общему пространству-контейнеру*/
+	position: relative;
+	width: 300px;  /*размеры куба можно прям тут, а у дочерних width: inherit*/
+	height: 300px;   /*размеры куба можно прям тут, а у дочерних height: inherit*/
+}
+
+.cube {
+	transform-style: preserve-3d;   /*задаём 3D-вид конкретно фигуре*/
+  width: inherit;
+	height: inherit;
+  transition: transform 0.5s; /* Плавный переход для поворота куба */
+}
+
+.side {
+	position: absolute;  /*задаём каждой стороен куба*/
+  width: inherit; 
+	height: inherit;
+	border: 5px solid black;
+	font: normal 70px Arial;
+	text-align: center;
+	line-height: 300px;
+  /*backface-visibility: hidden;  /*скрыть внутреннюю сторону. по умолч. она видна*/
+}
+
+.front {
+	transform: translateZ(150px); /*вперёд на 150*/
+}
+.back {
+	transform: rotateY(180deg) translateZ(150px);  /*переворачиваем и двигаем назад */ 
+}
+.right {
+	transform: rotateY(90deg) translateZ(150px);  /*поворачиваем на 90град и вперёд*/
+}
+.left {
+	transform: rotateY(-90deg) translateZ(150px);  /*поворачиваем наоборот и вперёд*/
+}
+.top {
+	transform: rotateX(90deg) translateZ(150px);
+}
+.bottom {
+	transform: rotateX(-90deg) translateZ(150px);
+}

@@ -1,0 +1,61 @@
+/*ПРИМЕР 1*/
+/* div {
+    width: 200px;
+    height: 200px;
+}
+
+.transition_effect {
+    position: relative;
+    cursor: pointer;
+    background: #efefef;
+    transition: 
+        all 4s; 
+}
+.transition_effect:hover {
+    background:#F9FF66;
+    width: 400px;
+}
+
+.transition_effect::after{
+    position: absolute;
+    content: 'WOW!';
+    opacity: 0; изначально псевдоэлемент скрыт
+    transition: opacity 2s; opacity меняется через 2сек
+  } 
+  .transition_effect:hover::after {
+    opacity: 1; при наведении через 2сек
+  } 
+  */
+
+  /*ПРИМЕР 2*/
+  .pic {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: url('https://thumbs.dreamstime.com/z/%D0%BC%D0%BE%D1%80%D0%B5-%D0%BD%D0%B0%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B9-%D1%80%D0%B0%D0%B7%D0%B2%D0%B5%D0%B2%D0%B0%D0%B5%D1%82-%D0%BF%D1%80%D0%B8-%D1%80%D1%8B%D0%B1%D1%8B-%D1%81%D0%BA%D0%B0%D1%87%D0%B0-%D0%B8%D0%B7-%D0%B2%D0%BE%D0%B4%D1%8B-126098321.jpg'); 
+  }
+
+  .transition_effect {
+    position: absolute;
+    width: 50%;
+    height: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    left:0px;
+/*чтобы внутр. эл-т уезжал вправо*/
+    transition: 
+        left 1s cubic-bezier(.08,.91,1,-0.56) 1s; 
+  }
+
+/*когда внешний эл-т hover - для внутр.эл-та применяется transition:*/
+  .pic:hover .transition_effect{ 
+    left:352px;
+  }
+
+
+
+
+  

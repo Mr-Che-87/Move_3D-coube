@@ -1,0 +1,13 @@
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.transform_rotate img {
+  transition: transform 0.5s;  
+}
+
+/*вместо псевдокласса hover - класс hovered, который появляется и "застывает" благодаря js-логике*/
+.transform_rotate.hovered img {   
+  transform: rotate(-36deg);  
+}

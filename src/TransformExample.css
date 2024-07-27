@@ -1,0 +1,48 @@
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/* поворот */
+.transform_rotate img {
+  transition: transform 0.5s;  /*или all в данном случае*/
+}
+
+.transform_rotate:hover img{
+  transform: rotate(-36deg);  /*градусы, в т.ч. и отрицательные*/
+}
+
+/* смещение */
+.transform_translate img {
+  transition: transform 1.5s;  
+}
+
+.transform_translate:hover img {
+  transform: translateX(300px) translateY(100px); /*или так. через ПРОБЕЛ*/
+  transform: translate(300px, 100px);  /*или так: первым x, потом y. через ЗАПЯТУЮ*/
+ 
+}
+
+/* масштаб */
+.transform_scale img {
+  transition: transform 1.5s; 
+}
+
+.transform_scale:hover img {
+ /* transform: scale(2.4);  /* больше 1 = увелич, меньше 1 = уменьшение, минус - перевернёт*/  
+  
+  transform: scale(-1);  /*сначала уменьшиться в ноль, а потом перевенётся */
+  transform: scaleX(-1) scaleY(1);   /*красиво перевенётся вокруг оси y */
+  transform: scaleX(1) scaleY(-1);   /*красиво перевенётся вокруг оси x */
+}
+
+/* наклон */
+.transform_skew img {
+  transition: transform 1.5s; 
+}
+
+.transform_skew:hover img {
+  transform: skew(20deg);   /*градусы, в т.ч. и отрицательные. по умолч - ось X*/ 
+  transform: skewX(30deg)  skewY(-30deg);  /*можно задавать и отдельно по осям*/
+}
+
