@@ -1,8 +1,21 @@
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+span {
+	font-weight: bold;
+}
+
+
+
 .container {
   perspective: 500px;  /*задаём 3D-перспективу общему пространству-контейнеру*/
-	position: relative;
-	width: 300px;  /*размеры куба можно прям тут, а у дочерних width: inherit*/
-	height: 300px;   /*размеры куба можно прям тут, а у дочерних height: inherit*/
+  position: relative;
+  width: 300px;  /*размеры куба можно прям тут, а у дочерних width: inherit*/
+  height: 300px;   /*размеры куба можно прям тут, а у дочерних height: inherit*/
+  margin-top: 200px;
 }
 
 .cube {

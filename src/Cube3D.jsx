@@ -51,19 +51,29 @@ const [rotateY, setRotateY] = useState(0);  //вокруг y - влево/впр
 }, []);
 
   return (
-    <div className="container">
-       <div
-        className="cube"
-        style={{
-          transform: `rotateY(${rotateY}deg) rotateX(${rotateX}deg) rotateZ(${rotateZ}deg)`, 
-        }}
-      >
-        <div className="side front">front</div>
-        <div className="side back">back</div>
-        <div className="side right">right</div>
-        <div className="side left">left</div>
-        <div className="side top">top</div>
-        <div className="side bottom">bottom</div>
+    <div  className="wrapper">
+      <div className="description">
+        <h2>Move the cube using the keyboard!</h2>
+          <p>- press left/right - <span>rotate Y</span></p>
+          <p>- press up/down - <span>rotate X</span></p>
+          <p>- press shift+up/shift+down - <span>rotate Z</span></p>
+      </div>
+
+
+      <div className="container">
+        <div
+          className="cube"
+          style={{
+            transform: `rotateY(${rotateY}deg) rotateX(${rotateX}deg) rotateZ(${rotateZ}deg)`, 
+          }}
+        >
+          <div className="side front">front</div>
+          <div className="side back">back</div>
+          <div className="side right">right</div>
+          <div className="side left">left</div>
+          <div className="side top">top</div>
+          <div className="side bottom">bottom</div>
+        </div>
       </div>
 </div>
   )
